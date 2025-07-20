@@ -430,7 +430,9 @@
 
         /* Responsive Design */
         /* Add to <style> after existing rules */
-.menu-toggle {
+
+@media (max-width: 768px) {
+    ..menu-toggle {
     display: none;
     font-size: 24px;
     background: none;
@@ -447,30 +449,6 @@ nav a {
     margin: 0 15px;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #003087;
-    }
-    nav.active {
-        display: flex;
-    }
-    nav a {
-        margin: 10px 0;
-        width: 80%;
-        text-align: center;
-        padding: 10px;
-        background-color: #003087;
-        text-decoration: none;
-        color: #FFFFFF;
     }
     header {
         position: relative;
