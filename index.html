@@ -159,7 +159,9 @@
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
+	<!-- Add this inside the <header> after the <h1> -->
+<button class="menu-toggle">☰</button>
+	    
         .hero-content p {
             font-size: 1.1rem;
             margin-bottom: 1.0rem;
@@ -427,36 +429,53 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
+        /* Add to <style> after existing rules */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
 
-            .hero-content p {
-                font-size: 0.9rem;
-            }
+nav {
+    display: flex;
+}
 
-            nav ul {
-                gap: 1rem;
-            }
-		nav {
-        	display: flex;
-       		 flex-direction: column;
-       		 align-items: center;
-       		 width: 100%;
-   	 }
-  		  nav a {
-  	      margin: 5px 0; /* Reduced from 10px */
+nav a {
+    margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        margin: 10px 0;
         width: 80%;
         text-align: center;
-        padding: 5px; /* Reduced from 10px */
-        font-size: 14px;
+        padding: 10px;
         background-color: #003087;
         text-decoration: none;
         color: #FFFFFF;
     }
     header {
-        text-align: center;
+        position: relative;
+    }
+}
 
             .services h2,
             .contact h2,
@@ -585,5 +604,10 @@
             });
         });
     </script>
+		<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('active');
+    });
+</script>
 </body>
 </html>
