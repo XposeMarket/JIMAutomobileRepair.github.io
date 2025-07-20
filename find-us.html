@@ -42,9 +42,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Us - Precision Auto Body Repair</title>
+    <title>J.I.M Automobile Repair</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+	 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
         * {
             margin: 0;
@@ -53,11 +53,31 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        body {
-            background-color: #f0f4f8;
-            color: #333;
-            line-height: 1.6;
-        }
+       #home {
+        background-image: url('JIM_logo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+        z-index: 1;
+    }
+    #home * {
+        position: relative;
+        z-index: 2;
+    }
+    }
+    header h1 {
+        color: #FFFFFF;
+    }
 
         /* Header and Navigation */
         header {
@@ -84,7 +104,7 @@
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
-            background: linear-gradient(45deg, #ffffff, #00aaff);
+            background: linear-gradient(45deg, #ffffff, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -210,7 +230,7 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .find-us h1 {
                 font-size: 2.2rem;
             }
@@ -257,7 +277,8 @@
 <body>
     <header>
         <nav>
-            <div class="logo">J.I.M Automobile Repair</div>
+	<img src="JIMlogo.png" alt="Logo for JIM"style="width: 10%;"></a>
+           <div class="logo">J.I.M Automobile Repair</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">Services</a></li>
