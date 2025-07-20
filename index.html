@@ -440,27 +440,31 @@
                 font-size: 0.9rem;
             }
 
-            nav ul {
-                gap: 1rem;
-            }
-		nav {
-        	display: flex;
-       		 flex-direction: column;
-       		 align-items: center;
-       		 width: 100%;
-   	 }
-  		  nav a {
-  	      margin: 5px 0; /* Reduced from 10px */
+            nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0; /* Added to control overall height */
+    }
+    nav a {
+        margin: 3px 0; /* Reduced from 5px */
         width: 80%;
         text-align: center;
-        padding: 5px; /* Reduced from 10px */
-        font-size: 14px;
-        background-color: #003087;
+        padding: 3px; /* Reduced from 5px */
+        font-size: 12px; /* Reduced from 14px */
+        background-color: #f0f0f0;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #000;
     }
     header {
         text-align: center;
+        padding-bottom: 10px; /* Added to create space below header */
+    }
+    #home {
+        padding-top: 20px; /* Added to push content down and avoid overlap */
+    }
+}
             .services h2,
             .contact h2,
             .about h2 {
